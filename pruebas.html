@@ -23,7 +23,9 @@
                         }else{
                             document.write("<td>*</td>");
                         } */
-                            if ((i==0 || i==nume-1 && j>=0 ) || ((i!=0 && i!= nume-1) && (j>0 && j<nume-1))){
+                            if ((i==0 || i==nume-1)){
+                                document.write("<td>*</td>");
+                            }else if (j==0 || j==nume-1){
                                 document.write("<td>*</td>");
                             }
                             
