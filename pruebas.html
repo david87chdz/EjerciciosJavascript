@@ -12,7 +12,7 @@
     <main>
         <table style="border: 1px black solid;">
             <script>
-                let nume = 4;
+                let nume = 8;
                 for (let i = 0; i < nume; i++) {
                     document.write("<tr>");
                     for (let j = 0; j < nume; j++) {
@@ -24,9 +24,11 @@
                             document.write("<td>*</td>");
                         } */
                             if ((i==0 || i==nume-1)){
-                                document.write("<td>*</td>");
+                                document.write("<td style=\"border: 1px black solid;\">*</td>");
                             }else if (j==0 || j==nume-1){
-                                document.write("<td>*</td>");
+                                document.write("<td style=\"border: 1px black solid;\">*</td>");
+                            }else{
+                                document.write("<td style=\"border: 1px black solid;\"></td>");
                             }
                             
                     }

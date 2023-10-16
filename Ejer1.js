@@ -58,12 +58,26 @@ console.log(a);
 
 //EJERCICIO pasar un numero a la funcion y hacer un cuadrado de * que sea num de ancho y num de alto con el medio vacio
 
-let nume= 4;
-for(let i=0; i<nume;i++){
-    for(let j=0; j<nume;j++){
-        if(i==0 || j==0){
-            console.log('*')
-        }
-        
+// EJERCICIO recibir 2 numeros y devolver cuantos numeros impares hay entre ellos
+
+let x=3;
+let y=9;
+let mayor=y;
+let menor=x;
+let contador=0;
+let funcion=(x,y)=>{
+    if(x>y){
+        mayor=x;
+        menor=y;
     }
-};
+    for(let i=menor+1;i<mayor;i++){
+        if(i%2!=0){
+            contador++;
+        }
+    }
+    console.log("Hay "+contador+" números impares");
+}
+
+funcion(8,29);
+
+
