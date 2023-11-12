@@ -93,6 +93,63 @@ console.log(typeof vueltaNum);
 
 // EJERCICIO recibir 2 array y devolver 1 con los elementos comunes entre los dos (y que no esten repetidos)
 
-let f11=(ar1 , ar2)=>{
-  Map(a1, a2)
+function getNewArray(array1, array2){
+       let resultado = array1.filter(num => {return array2.includes(num)});
+       return resultado; 
 }
+
+
+// EJERCICIO recibir un numero y formar una escalera con esa cantidad de escalones [-]
+// [-]
+// [-][-]
+// [-][-][-]
+
+let escalera=(num)=>{
+  let escalon="[-]";
+  let escalera = '';
+  for(let i=1;i<=num;i++){
+    escalera += escalon+'\n';
+    escalon += '[-]';
+  }
+  return escalera;
+}
+console.log(escalera(15));
+
+// EJERCICIO recibir dos paramentros, una oracion y una busqueda, la busqueda encontrarla en el texto y reemplazar por [-CENCURADO-]
+// Si no llega algun parametro mostrar mensajes diferentes
+
+function censurado(oracion, busqueda){
+  if(oracion==""){
+    return "Se necesita una oración";
+  }
+  if(busqueda==""){
+    return "Se necesita una busqueda";
+  }
+
+  if(oracion.includes(busqueda)){
+    return oracion.replace(busqueda,"[-CENCURADO-]");
+  }else{
+    return "La buqueda no se encuentra en la oración";
+  }
+};
+
+console.log(censurado("La luna azul", "luna"));
+
+// EJERCICIO recibir un numero y devolver hasta el numero 0 pero yendo de 8 en 8
+
+function menosOcho (numero){
+   if(numero<8){
+    return 0;
+   }
+   else{
+    for(let i=numero;i>0;i-8){
+      if(i<0){
+        return 0;
+      }else{
+        console.log(i);
+      }
+    }
+   }
+};
+
+console.log(menosOcho(56));

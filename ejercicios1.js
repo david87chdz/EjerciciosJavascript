@@ -207,7 +207,7 @@
 // console.log(buscar_reemplazar('hola susana te estamos llamando, hola', 'hola'));
 
 // second way 
-// function censurado(texto = false, busqueda = false){
+// function censurado(texto = false, busqueda =  false){
 //     let resultado = '';
 //     if(!texto && !busqueda){
 //         resultado = 'no puedes leer el texto y la busqueda';
